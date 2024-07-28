@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factions Page</title>
+  <link rel="stylesheet" href="style.css">
+  <audio id="humanAudio" loop>
+    <source src="Warcraft 3 Soundtrack - Human_256k.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="hordeAudio" loop>
+    <source src="Warcraft 3 Soundtrack - Orc_256k.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="nightElfAudio" loop>
+    <source src="Warcraft 3 Soundtrack - Night Elf_256k.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="undeadAudio" loop>
+    <source src="Warcraft 3 Soundtrack - Undead_256k.mp3" type="audio/mp3">
+  </audio>
+  <style>
+    body {
+      margin: 0;
+      background-color: darkslategrey;
+      font-family: sans-serif;
+      text-align: justify;
+      background-image: url('images/background.jpeg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: repeat;
+    }
+
+    /* Styles for the faction page */
+    .faction-section {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1100px;
+      margin-top: 60px;
+      /* Adjust the margin to create space below the navigation bar */
+    }
+
+    .box {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .top-left {
+      top: 20px;
+      left: 20px;
+    }
+
+    .bottom-left {
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .right-box {
+      top: 20px;
+      right: 20px;
+      height: 360px;
+      width: calc(100% - 240px);
+    }
+
+    .faction-logo {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .images-videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .images-videos img,
+    .images-videos video {
+      max-width: 48%;
+      margin-bottom: 10px;
+    }
+
+    .faction-info {
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .hero-container {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* Create a 3-column grid */
+      gap: 10px;
+      /* Add some space between the hero boxes */
+    }
+
+    .hero {
+      width: 256px;
+      /* Set the width back to 256 pixels */
+      height: 320px;
+      /* Adjusted height to maintain the aspect ratio */
+      background-image: url('images/Alliance/human_background.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 2px solid #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      /* Add space between image and text */
+      overflow: hidden;
+      /* Hide overflow content */
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      /* Maintain aspect ratio */
+      object-fit: cover;
+    }
+
+    .hero span {
+      text-align: center;
+      color: royalblue;
+      margin-top: 5px;
+    }
+
+    /* Styles for the navigation bar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      /* Ensure the navigation bar is above the faction logo */
+    }
+
+    .logo-banner img {
+      max-height: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+      display: flex;
+      align-items: center;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <div class="logo-banner">
+      <img src="images/WC3_logo.png" alt="Banner">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">About</a></li>
+        <li><a href="page3.html">Factions</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Human Faction Section -->
+  <div class="faction-section" data-faction="human">
+    <div class="box top-left">
+      <img src="images/Alliance/human_logo.png" alt="Human Logo" class="faction-logo">
+      <p>The Alliance's emblem represents the unity forged among the diverse human nations, dwarves, and high elves. The
+        stylized lion symbolizes the strength and nobility of humanity. The lion often holds a hammer, signifying the
+        forging of alliances and the cooperative effort against common threats. The emblem reflects the diverse but
+        united front of the Alliance.</p>
+    </div>
+  </div>
+  <div class="box right-box">
+    <div class="faction-info">
+      <h2>The Alliance</h2>
+      <p>The Alliance is a formidable coalition of noble races.Their story unfolds as they strive to maintain order in
+        the face of emerging dangers, including the undead Scourge and the burning threat of the Orcish Horde. As a
+        beacon of unity and resilience, the Alliance
+        brings together diverse factions, each contributing unique strengths to face the myriad challenges that lie
+        ahead.</p>
+      <h2>Affiliated Factions</h2>
+      <p>Gilneas: Although isolated at times, the human kingdom of Gilneas remains a staunch supporter of the
+        Alliance, contributing skilled warriors and a strong naval presence.</p>
+      <p>Kul Tiras: As a maritime powerhouse, the island nation of Kul Tiras provides the Alliance with a formidable
+        navy, ensuring control over Azeroth's seas and bolstering the overall strength of the coalition.</p>
+      <p>Lordaeron Survivors: Despite the fall of Lordaeron to the undead scourge, survivors from this once-great
+        kingdom continue to rally under the Alliance banner, seeking redemption and vengeance against the forces of
+        darkness.</p>
+      <h2>Core Members</h2>
+      <p>Humans (Kingdom of Lordaeron): Led by King Terenas Menethil II, the human kingdom of Lordaeron forms the
+        political center of the Alliance. The fall of Lordaeron to the undead scourge sets the stage for the
+        Alliance's struggle against the insidious forces of the Lich King.</p>
+      <p>Dwarves (Bronzebeard Clan): The dwarves, staunch allies of the Alliance, contribute their resilience and
+        combat expertise to the cause. Under the leadership of Muradin Bronzebeard, they play a vital role in
+        combating the undead threat.</p>
+      <p>Elves (High Elves): The High Elves, led by Sylvanas Windrunner, bring their arcane mastery to the Alliance.
+        Their homeland, Quel'Thalas, suffers a devastating blow as the undead scourge, led by the traitor Arthas,
+        seeks to harness the power of the Sunwell.</p>
+      <div class="hero-container">
+        <div class="hero">
+          <img src="images/Alliance/BTNArthas-Reforged.png" alt="Arthas Portrait">
+          <span>Prince Arthas Menethil</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNJaina-Reforged.png" alt="Jaina Portrait">
+          <span>Jaina Proudmoore</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNMuradinBronzebeard.png" alt="Muradin Portrait">
+          <span>Muradin Bronzebeard</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNUther.png" alt="Uther the Lightbringer Portrait">
+          <span>Uther the Lightbringer</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNAntonidas.png" alt="Archmage Antonidas Portrait">
+          <span>Archmage Antonidas</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNProudMoore-Reforged.png" alt="Admiral Daelin Proudmoore Portrait">
+          <span>Admiral Daelin Proudmoore</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNGarithos-Reforged.png" alt="Grand Marshal Othmar Garithos Portrait">
+          <span>Grand Marshal Othmar Garithos</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNBloodMage2-Reforged.png" alt="Kael'thas Sunstrider Portrait">
+          <span>Kael'thas Sunstrider</span>
+        </div>
+        <div class="hero">
+          <img src="images/Alliance/BTNSylvanusWindRunner-Reforged.png" alt="Sylvanas Windrunner Portrait">
+          <span>Sylvanas Windrunner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Orc Faction Section -->
+  <div class="faction-section" data-faction="horde">
+    <div class="box top-left">
+      <img src="images/Horde/horde_logo.png" alt="Horde Logo" class="faction-logo">
+      <p>The Horde's emblem symbolizes the primal and aggressive nature of the orcish clans, trolls, and Tauren. The
+        head of a wolf or an orc is a central motif, representing loyalty, teamwork, and ferocity. The wolf, in
+        particular, is a symbol of the orcs' connection with the natural world and their emphasis on survival and
+        solidarity. The emblem reflects the raw power and unity of the Horde.</p>
+    </div>
+    <div class="box right-box">
+      <div class="faction-info">
+        <h2>The Orcish Horde</h2>
+        <p>The Orcish Horde is a formidable and diverse coalition of orcish clans united under the leadership of Thrall.
+          Driven by a desire for redemption and a new sense of honor, Thrall seeks to carve out a peaceful homeland for
+          his people, far from the conflicts of the Eastern Kingdoms. Through the leadership of Thrall, the Orcish Horde
+          becomes a pivotal force in the struggle against the Burning Legion.
+          ahead.</p>
+        <h2>Affiliated Factions</h2>
+        <p>Tauren (Bloodhoof Tribe): The Tauren, led by Cairne Bloodhoof, form a crucial alliance with the Horde. The
+          Bloodhoof Tribe contributes their strength, resilience, and spiritual connection to nature.</p>
+        <p>Trolls (Darkspear Tribe): Led by Vol'jin, the Darkspear Tribe plays a significant role in the Horde,
+          providing skilled hunters and warriors. Vol'jin's leadership is vital to the Troll presence within the Horde.
+        </p>
+        <p>Goblins (Bilgewater Cartel): Goblins from the Bilgewater Cartel ally with the Horde during the events of The
+          Frozen Throne, bringing their technological expertise, cunning, and mercantile skills to the cause.</p>
+        <p>Ogres (Stonemaul Clan): The Stonemaul Clan, led by Rexxar, consists of ogres who have allied with the Horde.
+          Rexxar's leadership ensures that the ogres contribute their strength and brutality to the Horde's military
+          power.</p>
+
+        <h2>Core Members</h2>
+        <p>Orcs (Orgrimmar): Thrall's fellow orcs, residing in Orgrimmar, form the backbone of the Horde. Their strength
+          in battle, resilience, and shamanistic traditions contribute significantly to the Horde's military might.</p>
+        <p>Burning Blade Clan: The Burning Blade Clan, though not directly represented, remains part of the broader
+          orcish culture. Their allegiance may vary, but their presence is acknowledged.</p>
+        <p>Blackrock Clan: The Blackrock Clan, a prominent orcish clan, has a historical significance. While not
+          directly involved in the events of the campaigns, their influence is part of the orcish heritage.</p>
+        <p>Warsong Clan: The Warsong Clan, known for its warrior traditions, played a significant role in orcish
+          history. Although not directly featured, their legacy influences the Horde's ethos.</p>
+        <p>Frostwolf Clan: The Frostwolf Clan, led by Durotan, is integral to orcish history. While not directly
+          involved in the campaigns, their honor and resilience shape the Horde's identity.</p>
+        <div class="hero-container">
+          <div class="hero">
+            <img src="images/Horde/BTNThrall-Reforged.png" alt="Thrall Portrait">
+            <span>Thrall</span>
+          </div>
+          <div class="hero">
+            <img src="images/Horde/BTNHellScream-Reforged.png" alt="Grom Portrait">
+            <span>Grom Hellscream</span>
+          </div>
+          <div class="hero">
+            <img src="images/Horde/BTNCairneBloodhoof.png" alt="Cairne Portrait">
+            <span>Cairne Bloodhoof</span>
+          </div>
+          <div class="hero">
+            <img src="images/Horde/BTNVoljin.png" alt="Voljin Portrait">
+            <span>Vol'jin</span>
+          </div>
+          <div class="hero">
+            <img src="images/Horde/BTNRokhan.png" alt="Rokhan Portrait">
+            <span>Rokhan</span>
+          </div>
+          <div class="hero">
+            <img src="images/Horde/BTNRexxar.png" alt="Rexxar Portrait">
+            <span>Rexxar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Night Elves Faction Section -->
+  <div class="faction-section" data-faction="nightElf">
+    <div class="box top-left">
+      <img src="images/Night Elves/night_elves_logo.png" alt="Night Elves Logo" class="faction-logo">
+      <p>The Night Elves' emblem draws inspiration from their close connection to nature and the goddess Elune. Elements
+        such as leaves, trees, and crescent moons are common. The crescent moon, associated with Elune, symbolizes the
+        Night Elves' affinity for the night and their guardianship of nature. The emblem embodies their harmonious
+        relationship with the natural world, emphasizing their role as protectors.</p>
+    </div>
+    <div class="box right-box">
+      <div class="faction-info">
+        <h2>The Night Elves</h2>
+        <p>The Night Elves, an ancient and mystical race, inhabit the dense forests of Kalimdor. Led by the enigmatic
+          Tyrande Whisperwind and her companion Malfurion Stormrage, the Night Elves are deeply connected to nature and
+          the Well of Eternity. As they grapple with the intrusion of outside forces, including the Burning Legion and
+          the tensions within their own society, the Night Elves seek to preserve the sanctity of their ancestral lands
+          and uphold the balance between nature and civilization.</p>
+        <h2>Affiliated Factions</h2>
+        <p>Dryads (Sentinels): The Sentinels, led by Tyrande, are an elite group of Night Elf warriors, archers, and
+          spellcasters. They act as guardians of the Night Elf lands and contribute to the defense of Kalimdor.</p>
+        <p>Keepers of the Grove (Cenarion Circle): The Cenarion Circle, led by Malfurion Stormrage, includes druids and
+          protectors dedicated to maintaining the balance of nature. They work closely with the Night Elves to safeguard
+          the forests and natural order.</p>
+        <p>Highborne (Shen'dralar): The Shen'dralar, once part of the Highborne caste, seek redemption and
+          reconciliation with the Night Elves. Although not directly featured in the campaigns, their presence is
+          acknowledged in Night Elf society.</p>
+
+        <h2>Core Members</h2>
+        <p>Night Elves (Kalimdor Empire): The Night Elves, as a whole, are led by the wise and fierce Tyrande
+          Whisperwind and the powerful Archdruid Malfurion Stormrage. Their ancient civilization, steeped in tradition
+          and magic, forms the core of the Night Elf society.</p>
+        <p>Dryads (Sentinels): The Sentinels, under Tyrande's leadership, are elite warriors dedicated to protecting
+          Night Elf territories. Their combat skills and loyalty make them essential to the Night Elf forces.</p>
+        <p>Keepers of the Grove (Cenarion Circle): The druids of the Cenarion Circle, led by Malfurion Stormrage,
+          represent the heart of Night Elf nature magic. Malfurion's wisdom and power are crucial in the defense of
+          Kalimdor.</p>
+        <p>Ancient Protectors (World Tree Guardians): The Ancient Protectors, ancient tree guardians, serve as the Night
+          Elves' formidable defenders. These mighty beings contribute to the Night Elves' defensive strategies and play
+          a key role in battles.</p>
+        <p>Wisp Spirits: The Wisp Spirits, ethereal entities tied to Night Elf magic, provide unique support to the
+          Night Elves. They play a role in construction, scouting, and even combat, showcasing the Night Elves' mystical
+          connection to nature.</p>
+        <div class="hero-container">
+          <div class="hero">
+            <img src="images/Night Elves/BTNWarden2-Reforged.png" alt="Maiev Shadowsong Portrait">
+            <span>Maiev Shadowsong</span>
+          </div>
+          <div class="hero">
+            <img src="images/Night Elves/BTNFurion-Reforged.png" alt="Malfurion Stormrage Portrait">
+            <span>Malfurion Stormrage</span>
+          </div>
+          <div class="hero">
+            <img src="images/Night Elves/BTNTyrande.png" alt="Tyrande Whisperwind Portrait">
+            <span>Tyrande Whisperwind</span>
+          </div>
+          <div class="hero">
+            <img src="images/Night Elves/BTNCenarius.png" alt="Cenarius Portrait">
+            <span>Cenarius</span>
+          </div>
+          <div class="hero">
+            <img src="images/Night Elves/BTNHeroDemonHunter-Reforged.png" alt="Illidan Stormrage Portrait">
+            <span>Illidan Stormrage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Undead Faction Section -->
+  <div class="faction-section" data-faction="undead">
+    <div class="box top-left">
+      <img src="images/Undead/undead_logo.png" alt="Undead Logo" class="faction-logo">
+      <p>The Scourge's emblem reflects their dark and necromantic nature. Featuring skulls, bones, and morbid symbols,
+        it represents death, decay, and the undead. The sinister imagery symbolizes the Scourge's allegiance to the Lich
+        King and their role as agents of the Burning Legion in spreading undeath across Azeroth. The emblem embodies the
+        terror and malevolence associated with the undead.</p>
+    </div>
+    <div class="box right-box">
+      <div class="faction-info">
+        <h2>The Undead Scourge</h2>
+        <p>The Undead Scourge, a relentless force led by the menacing Lich King, Arthas Menethil, seeks to spread death
+          and darkness across Azeroth. Comprising undead minions, the Scourge is fueled by the necromantic power of the
+          Lich King and the cunning strategies of figures like Kel'Thuzad and Sylvanas Windrunner. As the Scourge
+          advances, it leaves a trail of devastation, converting the living into loyal minions in its quest for dominion
+          over the world. The Undead Scourge's chilling presence poses a grave threat to all life on Azeroth.</p>
+        <h2>Affiliated Factions</h2>
+        <p>Cult of the Damned: The Cult of the Damned, led by the necromancer Kel'Thuzad, serves as a key faction
+          within
+          the Scourge. They play a significant role in spreading the undead plague and carrying out the will of the
+          Lich
+          King.</p>
+        <p>Banshee's Veil (Forsaken): The Forsaken, under the leadership of Sylvanas Windrunner, break free from the
+          Lich King's control. As the Banshee's Veil, they form a faction within the Scourge but later establish their
+          own identity and goals.</p>
+        <p>Dreadlords: The Dreadlords, such as Tichondrius, are powerful demon commanders serving the Burning Legion.
+          While aligned with the Scourge, their ultimate allegiance lies with the Legion's goals.</p>
+
+        <h2>Core Members</h2>
+        <p>Lich King (Ner'zhul/Arthas): The Lich King, initially Ner'zhul and later merged with Arthas Menethil, is
+          the
+          central figure leading the Undead Scourge. His dark powers and influence drive the Scourge's relentless
+          campaign across Azeroth.</p>
+        <p>Dark Lady Sylvanas Windrunner: Sylvanas Windrunner, once a high elf ranger-general, breaks free from the
+          Lich
+          King's control and becomes the Dark Lady of the Forsaken. Her leadership shapes the destiny of the undead
+          and
+          leads to the establishment of the Forsaken faction.</p>
+        <p>Kel'Thuzad: Kel'Thuzad, a powerful necromancer, serves as a key lieutenant of the Lich King. His dark magic
+          and cunning strategies contribute to the Scourge's malevolent plans, especially during the events of
+          Warcraft
+          III.</p>
+        <p>Dreadlords (Tichondrius): Tichondrius and other Dreadlords act as powerful commanders within the Scourge,
+          serving both the Lich King and their demonic masters in the Burning Legion.</p>
+        <p>Abominations and Crypt Fiends: Undead creatures like Abominations and Crypt Fiends serve as core units in
+          the
+          Scourge's armies, embodying the twisted creations of necromantic magic.</p>
+        <div class="hero-container">
+          <div class="hero">
+            <img src="images/Undead/BTNArthasEvil.png" alt="The Lich King Arthas Portrait">
+            <span>Arthas Menethil</span>
+          </div>
+          <div class="hero">
+            <img src="images/Undead/BTNAnubarak.png" alt="Anubarak Portrait">
+            <span>Anub'arak</span>
+          </div>
+          <div class="hero">
+            <img src="images/Undead/BTNKelThuzadCin.png" alt="KelThuzard Portrait">
+            <span>Kel'Thuzard</span>
+          </div>
+          <div class="hero">
+            <img src="images/Undead/BTNSylvanas.png" alt="Sylvanas Windrunner Portrait">
+            <span>Sylvanas Windrunner</span>
+          </div>
+          <div class="hero">
+            <img src="images/Undead/BTNTichondrius-Reforged.png" alt="Tichondrius Portrait">
+            <span>Tichondrius</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    playHumanMusic();
+    window.addEventListener("scroll", checkFactionSectionInView);
+  });
+
+  function playHumanMusic() {
+    document.getElementById("humanAudio").play();
+    document.getElementById("hordeAudio").pause();
+    document.getElementById("nightElfAudio").pause();
+    document.getElementById("undeadAudio").pause();
+  }
+
+  function playHordeMusic() {
+    document.getElementById("hordeAudio").play();
+    document.getElementById("humanAudio").pause();
+    document.getElementById("nightElfAudio").pause();
+    document.getElementById("undeadAudio").pause();
+  }
+
+  function playNightElfMusic() {
+    document.getElementById("nightElfAudio").play();
+    document.getElementById("humanAudio").pause();
+    document.getElementById("hordeAudio").pause();
+    document.getElementById("undeadAudio").pause();
+  }
+
+  function playUndeadMusic() {
+    document.getElementById("undeadAudio").play();
+    document.getElementById("humanAudio").pause();
+    document.getElementById("hordeAudio").pause();
+    document.getElementById("nightElfAudio").pause();
+  }
+
+  function checkFactionSectionInView() {
+    var factionSections = document.querySelectorAll(".faction-section");
+    var currentFaction = null;
+    for (var i = 0; i < factionSections.length; i++) {
+      var rect = factionSections[i].getBoundingClientRect();
+
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        currentFaction = factionSections[i].getAttribute("data-faction");
+
+        switch (currentFaction) {
+          case "human":
+            playHumanMusic();
+            break;
+          case "horde":
+            playHordeMusic();
+            break;
+          case "nightElf":
+            playNightElfMusic();
+            break;
+          case "undead":
+            playUndeadMusic();
+            break;
+        }
+
+        break;
+      }
+    }
+  }
+</script>
+
+
+</html>

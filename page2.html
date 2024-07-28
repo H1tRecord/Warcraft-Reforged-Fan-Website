@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    header {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    .logo-banner img {
+      max-height: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+
+    /* Styles for About page content */
+    .about-section {
+      padding: 80px 40px;
+      text-align: center;
+      background-color: #292929;
+      border-radius: 15px;
+      margin: 100px 20px 20px;
+    }
+
+    .about-section h2,
+    .about-section h3 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .feature-section {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .feature-section p {
+      margin-bottom: 15px;
+    }
+
+    .image-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .image-section img {
+      max-width: 30%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Learn More button */
+    .learn-more-button {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .learn-more-button a {
+      background-color: #555;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .learn-more-button a:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-bar">
+    <div class="logo-banner">
+      <img src="images/WC3_logo.png" alt="Banner">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="factions.html">Factions</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <audio autoplay loop>
+    <source src="Warcraft III Reforged Main Theme_256k.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="about-section">
+    <h2>About Warcraft 3: Reforged</h2>
+    <p>Warcraft III: Reforged takes players back to the high-fantasy world of Azeroth, where they command armies and
+      heroes from four distinct factions. These factions include the stalwart humans of the Alliance, the brutish orcs
+      of the Horde, the mysterious Night Elves, and the undead forces of the Scourge.</p>
+
+    <div class="feature-section">
+      <h2>Key Features</h2>
+      <p><strong>Remastered Graphics:</strong> Warcraft III: Reforged features completely reimagined graphics, including
+        updated character models, animations, and environments. The remastered visuals bring the classic game into the
+        modern era while retaining the iconic art style.</p>
+      <p><strong>Rebalanced Gameplay:</strong> The gameplay has been rebalanced to ensure a more modern and competitive
+        experience. While the core mechanics remain true to the original, certain adjustments have been made to improve
+        overall balance and strategy.</p>
+      <p><strong>Epic Campaigns:</strong> The game includes the original Warcraft III campaigns with enhanced
+        storytelling and voiceovers. Players can experience the epic tales of Arthas Menethil, Thrall, Tyrande
+        Whisperwind, and more as they navigate through a rich and immersive narrative.</p>
+      <p><strong>World Editor:</strong> Warcraft III: Reforged comes with an updated World Editor, allowing players to
+        create and share their custom maps and campaigns. This tool has been pivotal in the creation of numerous popular
+        custom games, including the birth of the MOBA genre with Defense of the Ancients (DotA).</p>
+      <p><strong>Multiplayer:</strong> The game supports modern multiplayer features, including matchmaking and custom
+        game lobbies. Players can engage in competitive matches or team up with friends to conquer challenges.</p>
+      <p><strong>Classic Soundtrack:</strong> The iconic music of Warcraft III has been re-recorded and remastered,
+        providing a nostalgic and immersive audio experience.</p>
+    </div>
+
+    <h2>Factions</h2>
+    <div class="image-section">
+      <img src="images/Alliance/human_logo.png" alt="Image 1">
+      <img src="images/Horde/horde_logo.png" alt="Image 2">
+      <img src="images/Night Elves/night_elves_logo.png" alt="Image 3">
+      <img src="images/Undead/undead_logo.png" alt="Image 4">
+    </div>
+
+    <div class="learn-more-button">
+      <a href="page3.html">Learn More</a>
+    </div>
+
+    <h3>Watch the Trailer</h3>
+    <video controls>
+      <source src="videos/title_video.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var video = document.querySelector('video');
+    var audio = document.querySelector('audio');
+
+    video.addEventListener('play', function () {
+      audio.volume = 0.3; // Set the audio volume to 30%
+    });
+
+    video.addEventListener('pause', function () {
+      audio.volume = 1.0; // Reset the audio volume when the video is paused
+    });
+
+    video.addEventListener('ended', function () {
+      audio.volume = 1.0; // Reset the audio volume when the video ends
+    });
+  });
+</script>
+
+</html>
